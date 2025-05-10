@@ -1,0 +1,293 @@
+@font-face {
+    font-family: 'Minal';
+    font-weight: normal;
+    src: url('../fonts/Minal.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Matter-Light';
+    font-style: light;
+    src: url('../fonts/Matter-Light.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Matter-Regular';
+    font-style: normal;
+    src: url('../fonts/Matter-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Matter-Medium';
+    font-style: medium;
+    src: url('../fonts/Matter-Medium.woff2') format('woff2');
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #111;
+    font-family: Matter-Regular;
+    margin: 0px;
+    padding: 0px;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-height: 100vh;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    padding-top: 33px;
+}
+
+.option-header{
+    color: #f5f5f5;
+    background-color: #111;
+    border-radius: 67px;
+    min-height: 50px;
+    min-width: 50px;
+    text-align: center;
+    align-content: center;
+    margin: 0px 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+}
+
+.focused-header {
+    padding: 0px 20px !important;
+}
+
+.focused-header .option-content {
+    width: auto;
+    opacity: 1;
+}
+
+.focused-header .search-content {
+    width: 404px !important;
+}
+
+.focused-header .tone-content {
+    width: 600px !important;
+}
+
+.option-content {
+    width: 0px;
+    overflow: hidden;
+    transition: width 0.3s;
+    opacity: 0;
+}
+
+.tone-div .option-content {
+    height: 50px;
+    align-content: center;
+}
+
+.tone-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 10px;
+    font-size: 18px;
+    outline:1px solid #111;
+    position: relative;
+    background-color: transparent !important; 
+}
+
+.tone-bg {
+    background-color: #111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 67px;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+.tone-div .bi {
+    font-size: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.notes-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.notes-list .note {
+    background-color: transparent;
+    border:none;
+    position: relative;
+    color: #7A7A7A;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    font-family: Matter-Light;
+    transition: all 0.3s ease-in-out;
+}
+body:has(.note:hover) .selected,
+body:has(.note:hover) .tone-div .bi{
+    color: #111;
+}
+
+.note:hover {
+    color: #f5f5f5 !important;
+}
+
+
+.notes-list .selected {
+    color: #f5f5f5;
+    font-family: Matter-Medium;
+}
+
+/* .focused-header .info-div {
+    gap:20px;
+} */
+
+.info-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.info-div .icon-div {
+    margin-top: 2px;
+    font-family: Minal;
+    font-size: 20px;
+}
+
+.info-content {
+    text-align: left;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+.title {
+    font-family: Matter-Medium;
+    font-size: 18px;
+}
+
+.author {
+    font-family: Matter-Light;
+    font-size: 12px;
+}
+
+.search-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #111;
+    background-color: transparent !important;
+    position: relative;
+}
+
+.search-div .icon-div {
+    font-size: 25px;
+}
+
+.search-input {
+    height: 50px;
+    width: 400px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: Matter-Light;
+    font-size: 20px;
+    color:#f5f5f5;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-bg {
+    background-color: #111;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 67px;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    left:0px;
+    top:0px;
+}
+
+body:has(.search-div .icon-div:hover) .focused-header .search-bg,
+body:has(.search-div .icon-div:focus) .focused-header .search-bg{
+    height: 42px;
+    width: 42px;
+    top: 6px;
+    left: 416px;
+}
+
+body:has(.search-div .icon-div:hover) .search-input,
+body:has(.search-div .icon-div:hover) .search-input::placeholder {
+    color: #111;
+}
+
+.lyrics-div {
+    padding-top: 50px;
+    width: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    transition: all 0.3s;
+}
+
+.content {
+    margin-top: 300px;
+    margin-bottom: 300px;
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.content>div{
+    padding: 30px 0px;
+    scroll-snap-align: center;
+}
+
+.content>div:hover>.text-line,
+.content>div:hover>.chords-line{
+    color: #111;
+}
+.chords-line {
+    font-family: Matter-Medium;
+    letter-spacing: 6px;
+    color: #7A7A7A;
+}
+
+.text-line {
+    letter-spacing: 2px;
+    font-family: Matter-Light;
+    line-height: 150%;
+    color: #7A7A7A;
+}
+
+b {
+    font-weight: normal;
+    letter-spacing: 0px;
+}
+
+.line-selected{
+    font-size: 25px;
+}
+
+.line-selected .chords-line {
+    color: #111;
+    transition: all 0.3s;
+    font-family: Matter-Medium;
+}
+
+.line-selected .text-line {
+    font-family: Matter-Regular;
+    color: #111;
+    transition: all 0.3s;
+}

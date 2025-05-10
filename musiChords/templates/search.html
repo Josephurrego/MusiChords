@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de "{{ query }}" | Musichords</title>
+    <link rel="icon" href="{% static 'logo100.png' %}" type="image/icon type">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{% static 'search/style.css' %}">
+</head>
+<body>
+    <div class="root">
+        <nav class="nav">
+            <div class="logo"><span onclick="window.location.href = '/'">MC</span></div>
+            <div class="search">
+                <input class="search-input" type="text" value="{{ query }}" placeholder="Busca la cancion">
+                <button class="search-button"><i class="bi bi-search"></i> </button>
+                <div class="search-bg"></div>
+            </div>
+        </nav>
+        <div class="content">
+            {% for song in data %}
+            <div class="result-div" id="{{song.url}}">
+                <span class="song-title">{{song.title}}</span><br>
+                <span class="author">{{song.author}}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="{% static 'search/search.js' %}"></script>
+</body>
+</html>

@@ -21,10 +21,8 @@ Perfecto, aquí tienes tu texto completamente corregido y estructurado en **Mark
 - **HTML5 / CSS3** – Estructura y diseño de la interfaz.
 - **Web Audio API** (planeado) – Para análisis de frecuencia del audio.
 
-## 📷 Capturas de pantalla (pendiente)
-![Captura de pantalla de ejemplo](https://i.ibb.co/yBcb1g1n/Screenshot-28-5-2025-17213-127-0-0-1.jpg)
-![Captura de pantalla de ejemplo](https://i.ibb.co/Ps90rMNy/Screenshot-28-5-2025-17822-127-0-0-1.jpg)
-<a href="https://ibb.co/LDJH0r8y"><img src="https://i.ibb.co/Ps90rMNy/Screenshot-28-5-2025-17822-127-0-0-1.jpg" alt="Screenshot-28-5-2025-17822-127-0-0-1" border="0" /></a>
+## 📷 Capturas de pantalla
+[Captura](https://i.ibb.co/Ps90rMNy/Screenshot-28-5-2025-17822-127-0-0-1.jpg)
 
 
 ## 📦 Instalación

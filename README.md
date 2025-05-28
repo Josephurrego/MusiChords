@@ -22,7 +22,7 @@ Perfecto, aquí tienes tu texto completamente corregido y estructurado en **Mark
 - **Web Audio API** (planeado) – Para análisis de frecuencia del audio.
 
 ## 📷 Capturas de pantalla (pendiente)
-
+[url=https://ibb.co/VpcPZMZW][img]https://i.ibb.co/yBcb1g1n/Screenshot-28-5-2025-17213-127-0-0-1.jpg[/img][/url]
 <!-- Agrega aquí imágenes del proyecto funcionando. Puedes usar:
 ![Captura](ruta/a/la/imagen.png)
 -->

@@ -1,4 +1,4 @@
-# 🎶 MusiChords
+![image](https://github.com/user-attachments/assets/6ac1dc88-172d-4291-b752-36f24e064d60)# 🎶 MusiChords
 
 **MusiChords** es una aplicación web interactiva que detecta acordes de una canción en tiempo real y desplaza automáticamente la hoja de acordes sincronizada con la reproducción del audio. Diseñada para músicos, estudiantes y aficionados que desean practicar y tocar mientras siguen los acordes en pantalla.
 
@@ -17,7 +17,9 @@
 - **Web Audio API** (planeado) – Para análisis de frecuencia del audio.
 
 ## 📷 Capturas de pantalla
-![Captura](https://i.ibb.co/Ps90rMNy/Screenshot-28-5-2025-17822-127-0-0-1.jpg)
+![Captura](https://i.ibb.co/cXS7H2Hc/Screenshot-28-5-2025-17213-127-0-0-1.jpg)
+![Captura](https://i.ibb.co/Q7CtJkfV/Screenshot-28-5-2025-17822-127-0-0-1.jpg)
+![Captura](https://i.ibb.co/0RL1qtS0/Screenshot-28-5-2025-172017-127-0-0-1.jpg)
 
 
 ## 📦 Instalación
@@ -27,8 +29,7 @@
    ```bash
    git clone https://github.com/Josephurrego/MusiChords.git
    cd MusiChords
-```
-
+   ```
 2. Crea un entorno virtual e instala las dependencias:
 
    ```bash

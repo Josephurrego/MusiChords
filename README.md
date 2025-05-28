@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/6ac1dc88-172d-4291-b752-36f24e064d60)# 🎶 MusiChords
+# 🎶 MusiChords
 
 **MusiChords** es una aplicación web interactiva que detecta acordes de una canción en tiempo real y desplaza automáticamente la hoja de acordes sincronizada con la reproducción del audio. Diseñada para músicos, estudiantes y aficionados que desean practicar y tocar mientras siguen los acordes en pantalla.
 

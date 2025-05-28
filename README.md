@@ -56,6 +56,4 @@ Perfecto, aquí tienes tu texto completamente corregido y estructurado en **Mark
 
 * [ ] Integración con la Web Audio API para análisis de frecuencias.
 * [ ] Mejorar la precisión en la detección de acordes.
-* [ ] Interfaz responsiva y mobile-friendly.
-* [ ] Añadir opción para subir MP3 y procesarlos.
 * [ ] Soporte para múltiples instrumentos y afinaciones.

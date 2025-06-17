@@ -2,7 +2,7 @@ let CHORDS;
 let lineSelected;
 let infoOptionWidth;
 let infoOption;
-        
+let chordsList = []
 
 const CHORDS_ARR =  ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B']
 
@@ -146,10 +146,10 @@ function notesClickListeners(){
 
 function changeKey(oldKey,newKey){
     const distance = Tonal.Interval.distance(oldKey,newKey)
-    document.querySelectorAll('b').forEach(el => {
+    document.querySelectorAll('b').forEach((el,idx) => {
         el.textContent = Tonal.Chord.transpose(el.textContent,distance);
+        chordsList[idx] = simplificarAcorde(el.textContent)
     });
-
 }
 
 function scrollSnapObserver(){
@@ -164,7 +164,8 @@ function scrollSnapObserver(){
     const observer = new IntersectionObserver((entries,showOnScroll) => {
         entries.forEach((entry)=>{
             if(entry.isIntersecting){
-
+                idx = Number(entry.target.children[0].children[0].id.replace('CH-',''))
+                changeByUserSelectedChord(idx)
                 entry.target.classList.add('line-selected')
             }else {
                 entry.target.classList.remove('line-selected')
@@ -178,14 +179,41 @@ function scrollLinesClick(){
     const linesArray = document.querySelectorAll('.content>div')
     linesArray.forEach((el)=>{
         el.addEventListener('click',()=>{
+            idx = Number(el.children[0].children[0].id.replace('CH-',''))
+            changeByUserSelectedChord(idx)
             el.scrollIntoView({block:'center', behavior: 'smooth'})
         })
     })
 }
 
+function simplificarAcorde(nombreAcorde) {
+    // 1. Obtenemos el objeto del acorde con sus propiedades
+    const acorde = Tonal.Chord.get(nombreAcorde);
+
+    // Si el nombre no es un acorde válido, lo indicamos
+    if (acorde.empty) {
+        return "Acorde no válido";
+    }
+
+    // 2. Extraemos la tónica (nota raíz) y la cualidad
+    const tonica = acorde.tonic;
+    const cualidad = acorde.quality;
+
+    // 3. Construimos el nuevo nombre del acorde simplificado
+    if (cualidad === "Major") {
+        // Para acordes mayores (como Cmaj7, G7, F), devolvemos solo la tónica
+        return tonica;
+    } else if (cualidad === "Minor") {
+        // Para acordes menores (como Dm7, Am9), devolvemos la tónica + 'm'
+        return tonica + "m";
+    }
+}
+
 function initScaleDetection(){
     var tonic = document.querySelector('.notes-list').getAttribute('data-key');
-    
+    document.querySelectorAll('b').forEach((chordHtml)=>{
+        chordsList.push(simplificarAcorde(chordHtml.textContent))
+    });
     if(!tonic){
         var progression = [];
         document.querySelectorAll('b').forEach((chordHtml)=>{
@@ -194,7 +222,6 @@ function initScaleDetection(){
         progression = new Set(changeBemolToSharp(progression));
         tonic = detectScale(progression);
     }
-    console.log(tonic)
     showTonic(tonic);
 };
 
@@ -204,7 +231,6 @@ function changeBemolToSharp(progression){
 
 function detectScale(progression) {
     progression = new Array(...progression);
-    console.log(progression)
     const chromaticScale = changeBemolToSharp(Tonal.Scale.get('C Chromatic').notes);
     let aproxMatch = { length: 0 }
     for (let scaleIdx = 0; scaleIdx < chromaticScale.length; scaleIdx++) {
@@ -212,7 +238,6 @@ function detectScale(progression) {
         const results = progression.filter(note => {
             return actualScale.includes(note)
         });
-        console.log(chromaticScale[scaleIdx], results)
         if (results.length === progression.length) {
             return chromaticScale[scaleIdx]
         }

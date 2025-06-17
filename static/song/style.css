@@ -291,3 +291,20 @@ b {
     color: #111;
     transition: all 0.3s;
 }
+
+.selected-chord {
+    font-weight: bold;
+}
+
+
+.mic-btn{
+    all:unset;
+    background-color: #111;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.mic-btn .bi {
+    font-size: 30px;
+    color:#f5f5f5;
+}

@@ -14,7 +14,8 @@
 - **Python** & **Django** – Backend y lógica del servidor.
 - **JavaScript** – Sincronización en tiempo real y lógica interactiva.
 - **HTML5 / CSS3** – Estructura y diseño de la interfaz.
-- **Web Audio API** (planeado) – Para análisis de frecuencia del audio.
+- **Essentia.js** – Para deteccion de acordes.
+- **Tonal.js** - Para manejo de acordes en las letras.
 
 ## 📷 Capturas de pantalla
 ![Captura](https://i.ibb.co/cXS7H2Hc/Screenshot-28-5-2025-17213-127-0-0-1.jpg)

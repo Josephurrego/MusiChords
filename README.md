@@ -48,6 +48,5 @@
 
 ## 📚 Por hacer / Futuras mejoras
 
-* [ ] Integración con la Web Audio API para análisis de frecuencias.
 * [ ] Mejorar la precisión en la detección de acordes.
 * [ ] Soporte para múltiples instrumentos y afinaciones.

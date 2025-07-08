@@ -4,7 +4,7 @@
 
 ## 🌐 Demo en vivo
 
-Puedes probar la aplicación en vivo [aquí]:(https://musichords-ndcgf.ondigitalocean.app/)
+Puedes probar la aplicación en vivo [aquí](https://musichords-ndcgf.ondigitalocean.app/):
 
 ## 🚀 Características
 

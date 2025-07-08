@@ -2,6 +2,10 @@
 
 **MusiChords** es una aplicación web interactiva que detecta acordes de una canción en tiempo real y desplaza automáticamente la hoja de acordes sincronizada con la reproducción del audio. Diseñada para músicos, estudiantes y aficionados que desean practicar y tocar mientras siguen los acordes en pantalla.
 
+## 🌐 Demo en vivo
+
+Puedes probar la aplicación en vivo [aquí]:(https://musichords-ndcgf.ondigitalocean.app/)
+
 ## 🚀 Características
 
 - 🎧 **Detección en tiempo real de acordes** a partir de un archivo de audio.
